@@ -116,7 +116,7 @@ describe('Sign In', () => {
             .send(validData)
             .end((err, res) => {
                 res.should.have.status(200);
-                es.body.should.be.a('object');
+                res.body.should.be.a('object');
                 res.body.should.have.property('message').eql('OK');
                 done();
             });
