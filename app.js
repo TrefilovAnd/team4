@@ -25,7 +25,7 @@ if (process.env.NODE_ENV && process.env.NODE_ENV === 'prod') {
 
 // app.use(require('connect-livereload')());
 app.set('view engine', '.hbs');
-app.set('port', process.env.PORT || 8080);
+app.set('port', process.env.PORT || 8081);
 
 let mongoose = require('mongoose');
 
@@ -51,3 +51,5 @@ app.listen(app.get('port'), function () {
         app.get('port') +
         '. Ctrl + C for exit.');
 });
+
+module.exports = app;
